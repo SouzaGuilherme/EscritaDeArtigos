@@ -23,16 +23,16 @@
 \begin{document} 
 \maketitle
 
-%\begin{abstract}
-  %The energy consumed by datacenters currently uses 1,4\% of global energy. %produced.
-  %These machines has a composition of conventional hardware that spend lots energy. 
-  %To avoid this high consumption, exist architecture devices ARM that bring as main characteristic the low consumption, besides that, they can meet the computational demands of a cloud. 
-  %Therefore, this paper proposes a test to compare the energy efficiency between Raspberry PI 3 with ARM architecture and XPS with x64 archtecture. 
-%\end{abstract}
+\begin{abstract}
+  The energy consumed by datacenters currently uses 1,4\% of global energy. %produced.
+  These machines has a composition of conventional hardware that spend lots energy. 
+  To avoid this high consumption, exist architecture devices ARM that bring as main characteristic the low consumption, besides that, they can meet the computational demands of a cloud. 
+  Therefore, this paper proposes a test to compare the energy efficiency between Raspberry PI 3 with ARM architecture and XPS with x64 archtecture. 
+\end{abstract}
      
-%\begin{resumo} 
-  %Atualmente 1,4\% da energia mundial produzida é consumida por \textit{datacenters}. Cujas máquinas possuem uma composição da \textit{hardwares} convencionais com um alto consumo de energia. Existem, porém, dispositivos de arquitetura ARM que trazem como principal caracteristica o baixo consumo, e ainda sim podem vir também a atender as demandas computacionais de uma nuvem. Portanto, esse trabalho tem como objetivo comparar a eficiência energética aplicada ao teste presente, entre a pequena Raspberry PI 3 e a XPS, possuindo arquitetura ARM e x64 respectivamente .
-%\end{resumo}
+\begin{resumo} 
+  Atualmente 1,4\% da energia mundial produzida é consumida por \textit{datacenters}. Cujas máquinas possuem uma composição da \textit{hardwares} convencionais com um alto consumo de energia. Existem, porém, dispositivos de arquitetura ARM que trazem como principal caracteristica o baixo consumo, e ainda sim podem vir também a atender as demandas computacionais de uma nuvem. Portanto, esse trabalho tem como objetivo comparar a eficiência energética aplicada ao teste presente, entre a pequena Raspberry PI 3 e a XPS, possuindo arquitetura ARM e x64 respectivamente .
+\end{resumo}
 
 
 \section{Introdução}
@@ -40,9 +40,9 @@
   Em \cite{Joao}, foi implementado um nó computacional utilizando uma Raspberry PI B+ afim de comparar o consumo energético em meio a nuvem.
   Dando continuidade ao trabalho \cite{eu}, realizou-se um estudo comparando o consumo energético e o desempenho da Raspberry PI B e Raspberry PI 3 B utilizando o \textit{benchmark YCSB}. Este trabalho propõem uma comparação do consumo energético e desempenho da Raspberry PI 3 B e uma máquina com arquitetura x64. Para esta comparação foi criado um servidor em ambas máquinas, hospedando um site onde apenas a execução do \textit{request} é possível. Após escolheu-se as ferramentas necessárias para o controle de consumo de energia de ambas, já tendo em vista que a forma de medição seria dessemelhante, dada arquitetura e o consumo esperado por cada dispositivo.\\
   Logo após iniciou-se um ataque DoS(\textit{Denial of Service}) encarregado de realizar os \textit{requests} até a queda do atual servidor, de forma a obter um resultado aproximado, para equiparação da Raspberry PI 3 e a XPS e, a viabilidade de mater um serviço de qualidade aproximada, gerando um consumo razoavelmente menor\\
-  O presente artigo está organizado da seguinte forma: na Seção~\ref{sec:metodologia} são apresentados os dispositivos utilizados e suas características físicas, alem de todas ferramentas utilizado para realização da metodologia dos testes. Na Seção~\ref{sec:resultados}, são expostos os resultados obtidos após o ataque DoS e a captação de dados do consumo energético. Concluindo-se o trabalho na Seção~\ref{sec:conclusao}
+  O presente artigo está organizado da seguinte forma: na Seção~\ref{sec:trabCorrelatos} serão apresentados trabalhos relacionados, a seção~\ref{sec:metodologia} são apresentados os dispositivos utilizados e suas características físicas, alem de todas ferramentas utilizado para realização dos testes. Na Seção~\ref{sec:resultados}, são expostos os resultados obtidos após o ataque DoS e a captação de dados do consumo energético. Concluindo-se o trabalho na Seção~\ref{sec:conclusao}
 
-\section{Trabalhos Relacionados}
+\section{Trabalhos Relacionados} \label{sec:trabCorrelatos}
   Afim de verificar a viabilidade de uso e comportamento da \textit{Small Board} em uma nuvem computacional, \cite{Joao} propôs e avaliar a substituição do hardware convencional por um hardware de baixo consumo que respeite o Service-Level-Agreement (SLA) e reduza o consumo de energia dos \textit{data centers}.\\
   Com isso, implementou a Raspbarry PI B+ como um nodo computacional de baixo consumo, realizando as adaptações necessárias para compatibilidade com a arquitetura ARM, precisando escolher um \textit{hypervision} adequado para tal. A nuvem era composta por 10 computadores de arquitetura x64, sendo nove deles nodos computacionais e um nodo de controle, em meio a essa composição a Raspberry vinha à acrescer como mais um nodo computacional.\\
   A medição foi realizada através da execução do bechmark YCSB (\textit{Yahoo! Cloud Serving Benchmark}) que é especificamente desenvolvido para avaliar nuvens. Os resultados foram obtidos através da vazão de operações onde acabou por demonstrar um gargalo de processamento quando comparado ao nó de um baixo consumo. Porém a implementação da Rapberry PI B+ em uma nuvem, ainda sim é vantajosa, onde as características batam com as desempenhada pelo \textit{benchmark}.\\
@@ -133,10 +133,10 @@
     \end{tabular}
     \end{table}
 
-\section{Metodologia dos testes} \label{sec:testes}
-  Logo após o preparo do servidor e de seu hóspede, tendo em mãos as máquinas XPS e Raspberry PI3, pode-se dar início aos testes, colocando as mesmas configurações de servidor e hospede tanto numa quanto na outra, mudando somente a vitima e o atacante. Em primeiro momento o atacante foi o XPS, o qual rodou um ataque DoS em python, realizando um numero de \textit{request} passado pelo DoS, direcionando esse ataque inteiramente para Raspberry PI 3.\\
-  Enquanto a XPS efetuava os ataques um código em nodejs executou o papel de ficar escutando todos os \textit{resquests} recebidos, dessa forma tornou-se possível a verificação do número de acesso que o servidor pode atender até seu serviço ser derrubado. Para mensuração do consumo energético utilizou-se um multímetro captando a corrente elétrica total circulada pela placa, com tal valor em mãos calculou-se a potência a partir da fórmula, \textit{Potência = Tensão * Corrente}, logo tornou-se possível realizar o somatório da potência em relação ao tempo, para encontrar a energia total consumida durante a exposição do dispositivo ao ataque, fazendo uso da fórmula a seguir. $$E = \sum_{n=1}^{t} P*t$$ \\
-  % Em um segundo momento onde a XPS fez o papel de servidor, logo se tounou a vitima, para realizar a captação do consumo energético fez-se uso da tecnologia RAPL, podendo dessa forma chegar a um valor aproximado do consumo alem de ser uma forma segura, para poder seguir tais passos imposto teve-se de utilizar uma outra maquina XPS, de mesma configuração para ser a atacante, pelas exigência e disponibilidade do RALP para tal maquina, agora executamos o mesmo código anteriormente executado na vitima XPS, em ambos dispositivos o script foi executado 30 vezes com três valores de \textit{request}, 500 mil, 800 mil e 1 milhão consecutivamente para uma aquisição de dados mais solida.
+  \subsection{Metodologia dos testes} \label{sec:testes}
+    Logo após o preparo do servidor e de seu hóspede, tendo em mãos as máquinas XPS e Raspberry PI3, pode-se dar início aos testes, colocando as mesmas configurações de servidor e hospede tanto numa quanto na outra, mudando somente a vitima e o atacante. Em primeiro momento o atacante foi o XPS, o qual rodou um ataque DoS em python, realizando um numero de \textit{request} passado pelo DoS, direcionando esse ataque inteiramente para Raspberry PI 3.\\
+    Enquanto a XPS efetuava os ataques um código em nodejs executou o papel de ficar escutando todos os \textit{resquests} recebidos, dessa forma tornou-se possível a verificação do número de acesso que o servidor pode atender até seu serviço ser derrubado. Para mensuração do consumo energético utilizou-se um multímetro captando a corrente elétrica total circulada pela placa, com tal valor em mãos calculou-se a potência a partir da fórmula, \textit{Potência = Tensão * Corrente}, logo tornou-se possível realizar o somatório da potência em relação ao tempo, para encontrar a energia total consumida durante a exposição do dispositivo ao ataque, fazendo uso da fórmula a seguir. $$E = \sum_{n=1}^{t} P*t$$ \\
+    % Em um segundo momento onde a XPS fez o papel de servidor, logo se tounou a vitima, para realizar a captação do consumo energético fez-se uso da tecnologia RAPL, podendo dessa forma chegar a um valor aproximado do consumo alem de ser uma forma segura, para poder seguir tais passos imposto teve-se de utilizar uma outra maquina XPS, de mesma configuração para ser a atacante, pelas exigência e disponibilidade do RALP para tal maquina, agora executamos o mesmo código anteriormente executado na vitima XPS, em ambos dispositivos o script foi executado 30 vezes com três valores de \textit{request}, 500 mil, 800 mil e 1 milhão consecutivamente para uma aquisição de dados mais solida.
 
 
 % \section{Resultados obtidos} \label{sec:resultados}
