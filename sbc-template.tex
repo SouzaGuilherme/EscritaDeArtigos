@@ -49,15 +49,16 @@
   Em \cite{PiConsumo} segue a mesma preocupação com o alto consumo de energia vindo das \textit{clouds}, porém até 2012, 10,82\% da população mantem assinatura de banda larga até, mantendo 770 milhões de gateways domeśtico ao redor do mundo. Tendo um consumo de 10W cada, gerando um consumo unitário de 6,7TWh ao ano o que soma em 0,03\% na energia consumida mundialmente. Levando em consideração que os maiores consumo ocorrem por parte de maquinas com um \textit{hardware} mais poderoso, ainda sim não se pode ignorar o consumo vindo por parte de tais dispositivos, pois 43\% dos mesmo se mantem ligados diariamente e muitas vezes ociosos, durante esse período de ociosidade, poderia vir desempenhar funções de pré-carregamento para usuario (ou seja, armazenamento em cache, pré-busca de conteúdo, execução de serviços locais).\\
   A Raspberry PI vem sendo utilizada para inúmeras aplicações no qual fomenta o uso de tais aplicações com a visão em baixo consumo energético, com isso \cite{PiConsumo} apresenta o PowerPi um modelo de  potência concentrando-se no consumo de energia da Raspberry PI a fim de derivar novas possíveis estratégias de consumo de energia.\\
   Tais \textit{Smaal Board} vem crescendo em uso no conceito \textit{green computing}, com isso \cite{2018CLOUDSPiA}, faz uso de SDN (Software Defined Networking), que fornece uma visão logicamente centralizada da rede em um único ponto, o que permite que a rede se torne uma plataforma programável que pode se adaptar dinamicamente ao seu comportamento. Porém as \textit{cloud} vem em uma crescente expansão, aumentando em números e tamanhos os \textit{data centers}, fazendo com que a infraestrutura de tais aumente conforme há o aumento da demanada o que torna uma real escalada nas nuvens, porém SDN traz consigo a capacidade da redução da complexidade de tais redes gerando uma visão mais simples das das mesmas. Com isso apresentam o CLOUDS-Pi uma nuvem com composição heterogenia no qual integou-se as Raspberry PI, Contruindo uma rede de pequena escala, compondo esforços para união da ferramenta ao \textit{hardware} de baixo consumo.\\    
-%\section{Metodologia} \label{sec:metodologia}
-  %Nesta seção aborda-se a metodologia aplicada na realização do trabalho, o \textit{hardware} utilizado na comparação, as ferramentas utilizadas e aplicada alem das maneiras optadas para mensuração da energia consumida para que assim pudesse ser aplicado o método de análise estatística dos resultados.
-
-  %\subsection{Ataque de negação de serviço} \label{sec:ddos}
-    %Populares no âmbito de redes, os ataques do tipo DoS, ocorrem através do envio indiscriminado de requisições a um computador ou servidor alvo, causando-o uma sobrecarga, visando causar a indisponibilidade do serviço. Esses alvos escolhidos pelos atacantes(quem coordena o ataque) tenta tornar o conteúdo hospedado indisponível para qualquer outro utilizador, não se caracterizando como invasão de sistema visto que somente indisponibiliza o serviço. Pode-se dizer que é basicamente o ocorrido com telefonias em datas comemorativas como "noites de natal e ano novo, quando milhares de pessoas decidem, simultaneamente, cumprimentar à meia-noite parentes e amigos no Brasil e no exterior. Nos cinco minutos posteriores à virada do ano, muito provavelmente, você simplesmente não conseguirá completar a sua ligação, pois as linhas telefônicas estarão saturadas"\cite{ddOS}.\\
-    %O ataque do tipo DoS envolve somente um atacante ou seja é necessário somente um único computador para realizar inúmeras requisições ao alvo, ataques de tais tipos pode vir a derrubar somente servidores fracos e computadores comuns com pouca banda e com baixas especificações técnicas. Diferente dos ataques de DDoS (\textit{Distributed Denial of Service}), onde um computador mestre(maquina que recebe os parâmetros para o ataque e controla os zumbis) pode vir a gerenciar milhões de computadores chamados de zumbis(programas de agente, que se conecta de volta a um host mestre predefinido), que fora plantado em hosts remotos e ficam ociosos esperando o comando de ataque a vitima(alvo do ataque), ou seja, dessa forma os ataque são gerados por milhares de hosts incessantemente gerando centenas de megabits por segundo de inundação \cite{ddOS2}. 
   
-  %\subsection{Ataque utilizando DoS} \label{sec:ataquedos}
-    %Existem diferentes tipo de ataques que podem ser utilizado de acordo com a intenção do atacante, no presente artigo, focaremos somente em ataques volumétricos, como dito antes brevemente, ocasionando uma inundação, ou seja tratar de congestionar a rede com um grande volume de tráfego que sobrecarregue a banda até o serviço estar indisponível para acesso. Para execução utilizou-se o ataques DoS, que mostrou-se mais do que suficiente pela especificação dos \textit{hardwares} em teste.
+\section{Metodologia} \label{sec:metodologia}
+  Nesta seção aborda-se a metodologia aplicada na realização do trabalho, o \textit{hardware} utilizado na comparação, as ferramentas utilizadas e aplicada alem das maneiras optadas para mensuração da energia consumida para que assim pudesse ser aplicado o método de análise estatística dos resultados.
+
+  \subsection{Ataque de negação de serviço} \label{sec:ddos}
+    Populares no âmbito de redes, os ataques do tipo DoS, ocorrem através do envio indiscriminado de requisições a um computador ou servidor alvo, causando-o uma sobrecarga, visando causar a indisponibilidade do serviço. Esses alvos escolhidos pelos atacantes(quem coordena o ataque) tenta tornar o conteúdo hospedado indisponível para qualquer outro utilizador, não se caracterizando como invasão de sistema visto que somente indisponibiliza o serviço. Pode-se dizer que é basicamente o ocorrido com telefonias em datas comemorativas como "noites de natal e ano novo, quando milhares de pessoas decidem, simultaneamente, cumprimentar à meia-noite parentes e amigos no Brasil e no exterior. Nos cinco minutos posteriores à virada do ano, muito provavelmente, você simplesmente não conseguirá completar a sua ligação, pois as linhas telefônicas estarão saturadas"\cite{ddOS}.\\
+    O ataque do tipo DoS envolve somente um atacante ou seja é necessário somente um único computador para realizar inúmeras requisições ao alvo, ataques de tais tipos pode vir a derrubar somente servidores fracos e computadores comuns com pouca banda e com baixas especificações técnicas. Diferente dos ataques de DDoS (\textit{Distributed Denial of Service}), onde um computador mestre(maquina que recebe os parâmetros para o ataque e controla os zumbis) pode vir a gerenciar milhões de computadores chamados de zumbis(programas de agente, que se conecta de volta a um host mestre predefinido), que fora plantado em hosts remotos e ficam ociosos esperando o comando de ataque a vitima(alvo do ataque), ou seja, dessa forma os ataque são gerados por milhares de hosts incessantemente gerando centenas de megabits por segundo de inundação \cite{ddOS2}. 
+  
+  \subsection{Ataque utilizando DoS} \label{sec:ataquedos}
+    Existem diferentes tipo de ataques que podem ser utilizado de acordo com a intenção do atacante, no presente artigo, focaremos somente em ataques volumétricos, como dito antes brevemente, ocasionando uma inundação, ou seja tratar de congestionar a rede com um grande volume de tráfego que sobrecarregue a banda até o serviço estar indisponível para acesso. Para execução utilizou-se o ataques DoS, que mostrou-se mais do que suficiente pela especificação dos \textit{hardwares} em teste.
          
 
   %\subsection{servidor NGINX} \label{sec:nginx}
@@ -70,11 +71,11 @@
 
   
   % Prentendo espesificar o que esta hospedado no servidor
-  %\subsection{Hospede} \label{sec:site}
-    % Todos esse sites ja sao utilizados no portugues ? precisa-se colocar em italico ?
-    %Para uma simulação mais próxima da realidade, hospedou-se um \textit{site} insignificante em processos comparado ao que se tem atualmente no mercado disponível, porém mesmo que simples, pode-se simular os \textit{request}, para adquirir os dados que desejávamos e ver até que ponto a Raspberry PI 3 conseguia competir com o \textit{desktop} XPS.\\
-    %Mesmo tendo em vista que muitos dos \textit{sites} atuais trabalham com um poderoso banco de dados por trás deles, pelo fato de cadastros pessoais ou a alta do \textit{e-commerce}, temos ainda \textit{sites} simples dos quais não se exige um grande poder do servidor para mante-los estáveis para acesso dos usuários, não sendo o atual foco do trabalho a complexidade do hospede e sim ter algo com que se possa trabalhar nos testes.\\
-    %Composto por somente uma \textit{homepage} para atender os \textit{request}, o \textit{site} conta com uma estrutura simples em \textit{html}, \textit{css} juntamente a \textit{javascript}, tal \textit{Template} fora adquirida de forma totalmente gratuita no Free CSS \cite{sitesFree}, garantindo assim um hospede para os testes.
+  \subsection{Hospede} \label{sec:site}
+    %Todos esse sites ja sao utilizados no portugues ? precisa-se colocar em italico ?
+    Para uma simulação mais próxima da realidade, hospedou-se um \textit{site} insignificante em processos comparado ao que se tem atualmente no mercado disponível, porém mesmo que simples, pode-se simular os \textit{request}, para adquirir os dados que desejávamos e ver até que ponto a Raspberry PI 3 conseguia competir com o \textit{desktop} XPS.\\
+    Mesmo tendo em vista que muitos dos \textit{sites} atuais trabalham com um poderoso banco de dados por trás deles, pelo fato de cadastros pessoais ou a alta do \textit{e-commerce}, temos ainda \textit{sites} simples dos quais não se exige um grande poder do servidor para mante-los estáveis para acesso dos usuários, não sendo o atual foco do trabalho a complexidade do hospede e sim ter algo com que se possa trabalhar nos testes.\\
+    Composto por somente uma \textit{homepage} para atender os \textit{request}, o \textit{site} conta com uma estrutura simples em \textit{html}, \textit{css} juntamente a \textit{javascript}, tal \textit{Template} fora adquirida de forma totalmente gratuita no Free CSS \cite{sitesFree}, garantindo assim um hospede para os testes.
 
 
   % aqui tirei uma subsection que falria sobre os codigos ja que parecem desnecessaria
@@ -93,48 +94,48 @@
     % Essa parte escontrava-se no meu ultimo artigo que define bem a raspberry posso utilizar, ou reescrever como como realizo essa questao ?
     %Os computadores Raspberry PI foram originalmente concebidos para inspirar jovens programadores a aprimorar seu talento em codificação, ganhando um lugar no curso de informática na Universidade de Cambridge~\cite{pi2013raspberry}. Esse dispositivo pode ser adquirido por um valor razoavelmente baixo além de sua utilização em automações de diversos meios. As características de \textit{hardware} do dispositivo será apresentada na Tabela~\ref{tab:especificacao}.
 
-    % \begin{table}[!h]
-    % \centering
-    % \caption{Especifícação de \textit{hardware} do dispositivo, segundo o fabricante~\cite{fundation2015raspberry}.}
-    % \label{tab:especificacao}
-    % \begin{tabular}{c|c}
-    % \hline
-    % \textbf{Espesificações}                                           & \multicolumn{1}{l}{\textbf{Raspeberry PI 3}}                             \\ \hline
-    % Processador                                                       & \begin{tabular}[c]{@{}c@{}}BCM2837 64Bit\\ Quad Core 1.2GHz\end{tabular} \\ \hline
-    % Arquitetura                                                       & ARMv8                                                                    \\ \hline
-    % RAM                                                               & 1GB SDRAM 400MHz                                                         \\ \hline
-    % Armazenamento                                                     & Micro SD                                                                 \\ \hline
-    % USB 2.0                                                           & 4 Portas USB                                                             \\ \hline
-    % \begin{tabular}[c]{@{}c@{}}Máxima corrente/\\ Tensão\end{tabular} & \begin{tabular}[c]{@{}c@{}}2,4A/\\ 5V\end{tabular}                       \\ \hline
-    % GPIO                                                              & 40 Pins                                                                  \\ \hline
-    % \end{tabular}
-    % \end{table}
-    % % Aqui descreverei um pouco do desktop utilizado para teste
-    % % Utilizei o comando DMIDECODE para ter um conjunto mais espesifico de informacoes sobre o desktop  
-    % O \textit{desktop} selecionado para tal comparativo foi a Dell XPS ----------------- \cite{DellXPS}, suas especificações se encontrão presente na Tabela \ref{tab:especificacaoDesktop}, informações obtidas através do comando \textit{dmidecode}, o qual apresenta todas informações disponíveis sobre o dispositivo, possibilitando uma pesquisa mais especifica dentro dele atribuindo ao comando \textit{dmidecode --type} concatenado com uma chave da tabela de representação do comando, como a chave quatro, nos demonstrará todas especificações do processador e assim por diante.\\ 
-    % Suas principais escolha para comparativo, foi seu processador, que nos possibilita a utilização do RAPL \ref{sec:RAPL}, dessa forma tornou-se possível a obtenção de informações do consumo energético do dispositivo enquanto rodava as aplicações. Mesmo sendo um máquina muito superior a Raspberry PI bastando olhar para as duas tabelas, nossa intenção era mostrar até que ponto a pequena \textit{small board} consegue correr ao lado da poderosa XPS, o quanto isso é viável para conseguir uma economia energética associada a eficiência de tal aplicação.
+    \begin{table}[!h]
+    \centering
+    \caption{Especifícação de \textit{hardware} do dispositivo, segundo o fabricante~\cite{fundation2015raspberry}.}
+    \label{tab:especificacao}
+    \begin{tabular}{c|c}
+    \hline
+    \textbf{Espesificações}                                           & \multicolumn{1}{l}{\textbf{Raspeberry PI 3}}                             \\ \hline
+    Processador                                                       & \begin{tabular}[c]{@{}c@{}}BCM2837 64Bit\\ Quad Core 1.2GHz\end{tabular} \\ \hline
+    Arquitetura                                                       & ARMv8                                                                    \\ \hline
+    RAM                                                               & 1GB SDRAM 400MHz                                                         \\ \hline
+    Armazenamento                                                     & Micro SD                                                                 \\ \hline
+    USB 2.0                                                           & 4 Portas USB                                                             \\ \hline
+    \begin{tabular}[c]{@{}c@{}}Máxima corrente/\\ Tensão\end{tabular} & \begin{tabular}[c]{@{}c@{}}2,4A/\\ 5V\end{tabular}                       \\ \hline
+    GPIO                                                              & 40 Pins                                                                  \\ \hline
+    \end{tabular}
+    \end{table}
+    %Aqui descreverei um pouco do desktop utilizado para teste
+    %Utilizei o comando DMIDECODE para ter um conjunto mais espesifico de informacoes sobre o desktop  
+    O \textit{desktop} selecionado para tal comparativo foi a Dell XPS ----------------- \cite{DellXPS}, suas especificações se encontrão presente na Tabela \ref{tab:especificacaoDesktop}, informações obtidas através do comando \textit{dmidecode}, o qual apresenta todas informações disponíveis sobre o dispositivo, possibilitando uma pesquisa mais especifica dentro dele atribuindo ao comando \textit{dmidecode --type} concatenado com uma chave da tabela de representação do comando, como a chave quatro, nos demonstrará todas especificações do processador e assim por diante.\\ 
+    %Suas principais escolha para comparativo, foi seu processador, que nos possibilita a utilização do RAPL \ref{sec:RAPL}, dessa forma tornou-se possível a obtenção de informações do consumo energético do dispositivo enquanto rodava as aplicações. Mesmo sendo um máquina muito superior a Raspberry PI bastando olhar para as duas tabelas, nossa intenção era mostrar até que ponto a pequena \textit{small board} consegue correr ao lado da poderosa XPS, o quanto isso é viável para conseguir uma economia energética associada a eficiência de tal aplicação.
 
-    % \begin{table}[!h]
-    % \centering
-    % \caption{Especifícação de \textit{hardware} do \textit{desktop}.}
-    % \label{tab:especificacaoDesktop}
-    % \begin{tabular}{cc}
-    % \hline
-    % \multicolumn{1}{c|}{\textbf{Espesificações}}                                           & \textit{\textbf{Desktop}}                                                                   \\ \hline
-    % \multicolumn{1}{c|}{Processador}                                                       & \begin{tabular}[c]{@{}c@{}}8x Intel(R) Core(TM) i7-3370\\ CPU @ 3.40GHz 64Bits\end{tabular} \\ \hline
-    % \multicolumn{1}{c|}{Arquitetura}                                                       & -------                                                                                     \\ \hline
-    % \multicolumn{1}{c|}{RAM}                                                               & 8GB 2.666MHz                                                                                \\ \hline
-    % \multicolumn{1}{c|}{Armazenamento}                                                     & 1TB                                                                                         \\ \hline
-    % \multicolumn{1}{c|}{USB 2.0}                                                           & 4 Portas USB                                                                                \\ \hline
-    % USB 3.0                                                                                & 2 Portas USB                                                                                \\ \hline
-    % \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Máxima corrente/\\ Tensão\end{tabular}} & 8-4A/\\100-240V                                                                               \\ \hline
-    % \multicolumn{1}{c|}{--------------}                                                    & -------------                                                                               \\ \hline
-    % \end{tabular}
-    % \end{table}
+    \begin{table}[!h]
+    \centering
+    \caption{Especifícação de \textit{hardware} do \textit{desktop}.}
+    \label{tab:especificacaoDesktop}
+    \begin{tabular}{cc}
+    \hline
+    \multicolumn{1}{c|}{\textbf{Espesificações}}                                           & \textit{\textbf{Desktop}}                                                                   \\ \hline
+    \multicolumn{1}{c|}{Processador}                                                       & \begin{tabular}[c]{@{}c@{}}8x Intel(R) Core(TM) i7-3370\\ CPU @ 3.40GHz 64Bits\end{tabular} \\ \hline
+    \multicolumn{1}{c|}{Arquitetura}                                                       & -------                                                                                     \\ \hline
+    \multicolumn{1}{c|}{RAM}                                                               & 8GB 2.666MHz                                                                                \\ \hline
+    \multicolumn{1}{c|}{Armazenamento}                                                     & 1TB                                                                                         \\ \hline
+    \multicolumn{1}{c|}{USB 2.0}                                                           & 4 Portas USB                                                                                \\ \hline
+    USB 3.0                                                                                & 2 Portas USB                                                                                \\ \hline
+    \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Máxima corrente/\\ Tensão\end{tabular}} & 8-4A/\\100-240V                                                                               \\ \hline
+    \multicolumn{1}{c|}{--------------}                                                    & -------------                                                                               \\ \hline
+    \end{tabular}
+    \end{table}
 
-%\section{Metodologia dos testes} \label{sec:testes}
-  % Logo após o preparo do servidor e de seu hóspede, tendo em mãos as máquinas XPS e Raspberry PI3, pode-se dar início aos testes, colocando as mesmas configurações de servidor e hospede tanto numa quanto na outra, mudando somente a vitima e o atacante. Em primeiro momento o atacante foi o XPS, o qual rodou um ataque DoS em python, realizando um numero de \textit{request} passado pelo DoS, direcionando esse ataque inteiramente para Raspberry PI 3.\\
-  % Enquanto a XPS efetuava os ataques um código em nodejs executou o papel de ficar escutando todos os \textit{resquests} recebidos, dessa forma tornou-se possível a verificação do número de acesso que o servidor pode atender até seu serviço ser derrubado. Para mensuração do consumo energético utilizou-se um multímetro captando a corrente elétrica total circulada pela placa, com tal valor em mãos calculou-se a potência a partir da fórmula, \textit{Potência = Tensão * Corrente}, logo tornou-se possível realizar o somatório da potência em relação ao tempo, para encontrar a energia total consumida durante a exposição do dispositivo ao ataque, fazendo uso da fórmula a seguir. $$E = \sum_{n=1}^{t} P*t$$ \\
+\section{Metodologia dos testes} \label{sec:testes}
+  Logo após o preparo do servidor e de seu hóspede, tendo em mãos as máquinas XPS e Raspberry PI3, pode-se dar início aos testes, colocando as mesmas configurações de servidor e hospede tanto numa quanto na outra, mudando somente a vitima e o atacante. Em primeiro momento o atacante foi o XPS, o qual rodou um ataque DoS em python, realizando um numero de \textit{request} passado pelo DoS, direcionando esse ataque inteiramente para Raspberry PI 3.\\
+  Enquanto a XPS efetuava os ataques um código em nodejs executou o papel de ficar escutando todos os \textit{resquests} recebidos, dessa forma tornou-se possível a verificação do número de acesso que o servidor pode atender até seu serviço ser derrubado. Para mensuração do consumo energético utilizou-se um multímetro captando a corrente elétrica total circulada pela placa, com tal valor em mãos calculou-se a potência a partir da fórmula, \textit{Potência = Tensão * Corrente}, logo tornou-se possível realizar o somatório da potência em relação ao tempo, para encontrar a energia total consumida durante a exposição do dispositivo ao ataque, fazendo uso da fórmula a seguir. $$E = \sum_{n=1}^{t} P*t$$ \\
   % Em um segundo momento onde a XPS fez o papel de servidor, logo se tounou a vitima, para realizar a captação do consumo energético fez-se uso da tecnologia RAPL, podendo dessa forma chegar a um valor aproximado do consumo alem de ser uma forma segura, para poder seguir tais passos imposto teve-se de utilizar uma outra maquina XPS, de mesma configuração para ser a atacante, pelas exigência e disponibilidade do RALP para tal maquina, agora executamos o mesmo código anteriormente executado na vitima XPS, em ambos dispositivos o script foi executado 30 vezes com três valores de \textit{request}, 500 mil, 800 mil e 1 milhão consecutivamente para uma aquisição de dados mais solida.
 
 
