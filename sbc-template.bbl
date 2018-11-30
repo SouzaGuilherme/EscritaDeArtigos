@@ -1,0 +1,62 @@
+\begin{thebibliography}{}
+
+\bibitem[Adel et~al. 2018]{2018CLOUDSPiA}
+Adel, N.~T., Jungmin, S., and Rajkumar, B. (2018).
+\newblock Clouds-pi : A low-cost raspberry-pi based testbed for
+  software-defined-networking in cloud data centers.
+
+\bibitem[{Dell} ]{DellXPS}
+{Dell}.
+\newblock Desktop xps.
+\newblock Disponível
+  em:{\url{https://www.dell.com/pt-br/shop/desktops-da-dell/sf/xps-desktops}}.
+\newblock Acessado: 2018-06-22.
+
+\bibitem[{Free CSS Templates, CSS Layouts e More!} ]{sitesFree}
+{Free CSS Templates, CSS Layouts e More!}
+\newblock Free css.
+\newblock Disponível
+  em:{\url{https://www.free-css.com/free-css-templates?start=36}}.
+\newblock Acessado: 2018-05-22.
+
+\bibitem[Fundation 2015]{fundation2015raspberry}
+Fundation, R.~P. (2015).
+\newblock Raspberry pi documentation.
+
+\bibitem[G.~Souza and Pilla 2018]{eu}
+G.~Souza, J.~O. and Pilla, M. (2018).
+\newblock Comparação de desempenho do workload ycsb em raspberry pi~b+ e~3.
+\newblock In {\em XVIII Escola Regional de Alto Desempenho}, pages 117--120,
+  Porto Alegre/RS, Brasil.
+
+\bibitem[L.~E.~Solha 200]{ddOS}
+L.~E.~Solha, R.~T. (200).
+\newblock Tudo que você precisa saber sobre os ataques ddos.
+\newblock {\em International Journal of Cloud Computing and Services Science},
+  4(2):1--11.
+
+\bibitem[Oliveira and Ataides 2017]{Joao}
+Oliveira, J. and Ataides, V. (2017).
+\newblock Analize de desempenho de um no computacional de baixo consumo
+  utilizando benchmark ycsb.
+\newblock In {\em XVII Escola Regional de Alto Desempenho}, pages 207--210,
+  Ijui/RS, Brasil.
+
+\bibitem[S.~Farraposo and Owezarski 2005]{ddOS2}
+S.~Farraposo, L.~G. and Owezarski, P. (2005).
+\newblock Network security and dos attacks.
+
+\bibitem[Tso et~al. 2013]{PiConsumo}
+Tso, F.~P., White, D.~R., Jouet, S., Singer, J., and Pezaros, D.~P. (2013).
+\newblock The glasgow raspberry pi cloud: A scale model for cloud computing
+  infrastructures.
+\newblock In {\em 2013 IEEE 33rd International Conference on Distributed
+  Computing Systems Workshops}, pages 108--112.
+
+\bibitem[Van~Heddeghem et~al. 2014]{VanHeddeghem:2014:TWI:2657027.2657141}
+Van~Heddeghem, W., Lambert, S., Lannoo, B., Colle, D., Pickavet, M., and
+  Demeester, P. (2014).
+\newblock Trends in worldwide ict electricity consumption from 2007 to 2012.
+\newblock {\em Comput. Commun.}, 50:64--76.
+
+\end{thebibliography}
