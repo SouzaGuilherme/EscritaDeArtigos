@@ -40,7 +40,8 @@
 
 
   Em \cite{Joao}, foi implementado um nó computacional utilizando uma Raspberry PI B+ afim de comparar o consumo energético em meio a nuvem.
-  Na continuidade do trabalho, em \cite{eu} foi realizado um estudo comparando o consumo energético e o desempenho da Raspberry PI B e Raspberry PI 3 B utilizando o \textit{benchmark YCSB}  \textbf{REFERENCIA DO BENCHMARK}. Este trabalho propõem uma comparação do consumo energético e desempenho da Raspberry PI 3 B e uma máquina com arquitetura x64. Para tais testes, criou-se um servidor em ambas as máquinas hospedando um site onde seria possível apenas executar requets de acesso, após, escolheu-se as ferramentas necessárias para o controle de consumo de energia dos dispositivos, tendo em vista que a forma de mensuração seria diferente em cada, dada pela arquitetura e pelo consumo esperada por ambas.
+  Na continuidade do trabalho, em \cite{eu} foi realizado um estudo comparando o consumo energético e o desempenho da Raspberry PI B e Raspberry PI 3 B utilizando o \textit{benchmark YCSB}  \textbf{REFERENCIA DO BENCHMARK}. %o que a sigla significa?
+  Este trabalho propõem uma comparação do consumo energético e desempenho da Raspberry PI 3 B e uma máquina com arquitetura x64. Para tais testes, criou-se um servidor em ambas as máquinas hospedando um site onde seria possível apenas executar requets de acesso, após, escolheu-se as ferramentas necessárias para o controle de consumo de energia dos dispositivos, tendo em vista que a forma de mensuração seria diferente em cada, dada pela arquitetura e pelo consumo esperada por ambas.
 
 
 
@@ -56,15 +57,31 @@
  
    \cite{Joao} propôs avaliar a substituição do hardware convencional por um hardware de baixo consumo que respeite o Service-Level-Agreement (SLA) e reduza o consumo de energia dos \textit{data centers}, assim tornando viável o uso de uma \textit{Small Board} em uma nuvem computacional.
 
-%=======================revisei até aqui
-  Com isso, implementou a Raspbarry PI B+ como um nodo computacional de baixo consumo, realizando as adaptações necessárias para compatibilidade com a arquitetura ARM, precisando escolher um \textit{hypervision} adequado para tal. A nuvem era composta por 10 computadores de arquitetura x64, sendo nove deles nodos computacionais e um nodo de controle, em meio a essa composição a Raspberry vinha à acrescer como mais um nodo computacional.
+
+Assim, foi possível implementar uma Raspberry PI B+ como um nodo computacional de baixo consumo, com as devidas adaptações para manter a compatibilidade com a arquitetura ARM. A nuvem foi composta de 10 computadores convencionais de arquitetura x64, sendo nove nodos computacionais e um de controle, e junto desses nodos havia a Rasbpberry como um nodo adicional.
+
+%  Com isso, implementou a Raspbarry PI B+ como um nodo computacional de baixo consumo, realizando as adaptações necessárias para compatibilidade com a arquitetura ARM, precisando escolher um \textit{hypervision} adequado para tal. A nuvem era composta por 10 computadores de arquitetura x64, sendo nove deles nodos computacionais e um nodo de controle, em meio a essa composição a Raspberry vinha à acrescer como mais um nodo computacional.
 
 
-  A medição foi realizada através da execução do bechmark YCSB (\textit{Yahoo! Cloud Serving Benchmark}) que é especificamente desenvolvido para avaliar nuvens. Os resultados foram obtidos através da vazão de operações onde acabou por demonstrar um gargalo de processamento quando comparado ao nó de um baixo consumo. Porém a implementação da Rapberry PI B+ em uma nuvem, ainda sim é vantajosa, onde as características batam com as desempenhada pelo \textit{benchmark}.
+  A medição foi realizada utilizando o bechmark YCSB, %(\textit{Yahoo! Cloud Serving Benchmark}) não precisa repetir o que a sigla significa se tu já colocou isso antes
+     voltado para avaliar nuvens. Os resultados foram obtidos por meio da vazão de operações, onde foi observado um gargalo de processamento em comparação ao nó de um baixo consumo. Porém, a implementação da Rapberry PI B+ em uma nuvem ainda sim é vantajosa, 
 
+%reescrever
+    
+    onde as características batam com as desempenhada pelo \textit{benchmark}.
+%?????????????????????????????
 
-  Em \cite{PiConsumo} segue a mesma preocupação com o alto consumo de energia vindo das \textit{clouds}, porém até 2012, 10,82\% da população mantem assinatura de banda larga até, mantendo 770 milhões de gateways domeśtico ao redor do mundo. Tendo um consumo de 10W cada, gerando um consumo unitário de 6,7TWh ao ano o que soma em 0,03\% na energia consumida mundialmente. Levando em consideração que os maiores consumo ocorrem por parte de maquinas com um \textit{hardware} mais poderoso, ainda sim não se pode ignorar o consumo vindo por parte de tais dispositivos, pois 43\% dos mesmo se mantem ligados diariamente e muitas vezes ociosos, durante esse período de ociosidade, poderia vir desempenhar funções de pré-carregamento para usuario (ou seja, armazenamento em cache, pré-busca de conteúdo, execução de serviços locais).
-
+  Em \cite{PiConsumo}, foi proposto um data center composto por Raspberry Pi, %ver qual o modelo foi usado
+  voltado para o baixo consumo energético.
+  
+  
+  %segue a mesma preocupação com o alto consumo de energia vindo das \textit{clouds},                 tirei
+  
+  porém até 2012, %a gente precisa ver alguma ref mais nova, vai fazer 7 anos isso já
+  10,82\% da população mantem assinatura de banda larga até, mantendo 770 milhões de gateways domeśtico ao redor do mundo. Tendo um consumo de 10W cada, %cada gateway?
+  gerando um consumo unitário de 6,7TWh ao ano o que soma em 0,03\% na energia consumida mundialmente.
+  Levando em consideração que o maior consumo ocorre por parte de máquinas com um \textit{hardware} mais poderoso, ainda sim não se pode ignorar o consumo vindo por parte de tais dispositivos, pois 43\% dos mesmo se mantem ligados diariamente e muitas vezes ociosos, durante esse período de ociosidade, poderia vir desempenhar funções de pré-carregamento para usuario (ou seja, armazenamento em cache, pré-busca de conteúdo, execução de serviços locais).
+%===parei aqui
 
   A Raspberry PI vem sendo utilizada para inúmeras aplicações no qual fomenta o uso de tais aplicações com a visão em baixo consumo energético, com isso \cite{PiConsumo} apresenta o PowerPi um modelo de  potência concentrando-se no consumo de energia da Raspberry PI a fim de derivar novas possíveis estratégias de consumo de energia.
 
